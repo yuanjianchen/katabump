@@ -5,14 +5,20 @@ const path = require('path');
 const { spawn } = require('child_process');
 const axios = require('axios');
 const http = require('http');
+const {
+    resolveChromePath,
+    resolveUserDataDir,
+    resolveHeadless,
+    resolveDebugPort,
+} = require('./local_config');
 
 // 启用 stealth 插件
 chromium.use(stealth);
 
-const CHROME_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-const USER_DATA_DIR = path.join(__dirname, 'ChromeData_Katabump');
-const DEBUG_PORT = 9222;
-const HEADLESS = false;
+const CHROME_PATH = resolveChromePath();
+const USER_DATA_DIR = resolveUserDataDir({ baseDir: __dirname });
+const DEBUG_PORT = resolveDebugPort();
+const HEADLESS = resolveHeadless();
 // const HTTP_PROXY = ""
 // --- Proxy Configuration ---
 const HTTP_PROXY = process.env.HTTP_PROXY; // e.g., http://user:pass@1.2.3.4:8080 or http://1.2.3.4:8080
