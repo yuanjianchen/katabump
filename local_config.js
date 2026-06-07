@@ -51,10 +51,35 @@ function safeUsername(username) {
     return String(username).replace(/[^a-z0-9]/gi, '_');
 }
 
+function createRunTracker() {
+    const successes = [];
+    const failures = [];
+
+    return {
+        markSuccess(username, reason) {
+            successes.push({ username, reason });
+        },
+        markFailure(username, reason) {
+            failures.push({ username, reason });
+        },
+        summary() {
+            return {
+                successCount: successes.length,
+                failureCount: failures.length,
+                failures: failures.map(({ username, reason }) => ({ username, reason })),
+            };
+        },
+        exitCode() {
+            return failures.length === 0 ? 0 : 1;
+        },
+    };
+}
+
 module.exports = {
     resolveChromePath,
     resolveUserDataDir,
     resolveHeadless,
     resolveDebugPort,
     safeUsername,
+    createRunTracker,
 };

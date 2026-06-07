@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawn, exec } = require('child_process');
 const http = require('http');
-const { safeUsername } = require('./local_config');
+const { createRunTracker, safeUsername } = require('./local_config');
 
 const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN;
 const TG_CHAT_ID = process.env.TG_CHAT_ID;
@@ -328,6 +328,8 @@ async function attemptTurnstileCdp(page) {
     await page.addInitScript(INJECTED_SCRIPT);
     console.log('注入脚本已添加。');
 
+    const runTracker = createRunTracker();
+
     for (let i = 0; i < users.length; i++) {
         const user = users[i];
         const safeUser = safeUsername(user.username);
@@ -413,6 +415,7 @@ async function attemptTurnstileCdp(page) {
 
                         await sendTelegramMessage(`❌ *登录失败*\n用户: ${user.username}\n原因: 账号或密码错误`, failShotPath);
 
+                        runTracker.markFailure(user.username, '账号或密码错误');
                         continue;
                     }
                 } catch (e) { }
@@ -427,12 +430,14 @@ async function attemptTurnstileCdp(page) {
                 await page.waitForTimeout(1000);
                 await page.getByRole('link', { name: 'See' }).first().click();
             } catch (e) {
-                console.log('未找到 "See" 按钮。');
+                console.error('未找到 "See" 按钮。');
+                runTracker.markFailure(user.username, '登录后未找到服务器入口 See 链接');
                 continue;
             }
 
             // --- Renew 逻辑 ---
             let renewSuccess = false;
+            let renewResultReason = '';
             // 2. 一个扁平化的主循环：尝试 Renew 整个流程 (最多 20 次)
             for (let attempt = 1; attempt <= 20; attempt++) {
                 let hasCaptchaError = false;
@@ -544,6 +549,7 @@ async function attemptTurnstileCdp(page) {
                                     await sendTelegramMessage(`⏳ *暂无法续期 (跳过)*\n用户: ${user.username}\n原因: 还没到时间\n下次可用: ${dateStr}`, skipShotPath);
 
                                     renewSuccess = true; // Mark as done to stop retries
+                                    renewResultReason = `还没到续期时间: ${dateStr}`;
                                     try {
                                         const closeBtn = modal.getByLabel('Close');
                                         if (await closeBtn.isVisible()) await closeBtn.click();
@@ -578,6 +584,7 @@ async function attemptTurnstileCdp(page) {
 
                             await sendTelegramMessage(`✅ *续期成功*\n用户: ${user.username}\n状态: 服务器已成功续期！`, successShotPath);
                             renewSuccess = true;
+                            renewResultReason = '续期成功';
                             break;
                         } else {
                             console.log('   >> 模态框仍打开但无错误？重试循环...');
@@ -597,8 +604,14 @@ async function attemptTurnstileCdp(page) {
                     break;
                 }
             }
+            if (renewSuccess) {
+                runTracker.markSuccess(user.username, renewResultReason || '已处理');
+            } else {
+                runTracker.markFailure(user.username, '未完成续期确认');
+            }
         } catch (err) {
             console.error(`Error processing user:`, err);
+            runTracker.markFailure(user.username, err.message || '未知处理错误');
         }
 
         // Snapshot before handling next user
@@ -619,7 +632,11 @@ async function attemptTurnstileCdp(page) {
         console.log(`用户处理完成\n`);
     }
 
-    console.log('完成。');
+    const summary = runTracker.summary();
+    console.log(`完成。成功: ${summary.successCount}, 失败: ${summary.failureCount}`);
+    for (const failure of summary.failures) {
+        console.error(`失败用户: ${failure.username}; 原因: ${failure.reason}`);
+    }
     await browser.close();
-    process.exit(0);
+    process.exit(runTracker.exitCode());
 })();
