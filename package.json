@@ -1,16 +1,1 @@
-{
-    "name": "katabump-automation",
-    "version": "1.0.0",
-    "description": "Automation script for Katabump renewal",
-    "main": "renew.js",
-    "scripts": {
-        "start": "node renew.js",
-        "test": "node --test test/*.test.js"
-    },
-    "dependencies": {
-        "axios": "^1.13.4",
-        "playwright": "^1.40.0",
-        "playwright-extra": "^4.3.6",
-        "puppeteer-extra-plugin-stealth": "^2.11.2"
-    }
-}
+ewogICAgIm5hbWUiOiAia2F0YWJ1bXAtYXV0b21hdGlvbiIsCiAgICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgICAiZGVzY3JpcHRpb24iOiAiQXV0b21hdGlvbiBzY3JpcHQgZm9yIEthdGFidW1wIHJlbmV3YWwiLAogICAgIm1haW4iOiAicmVuZXcuanMiLAogICAgInNjcmlwdHMiOiB7CiAgICAgICAgInN0YXJ0IjogIm5vZGUgcmVuZXcuanMiLAogICAgICAgICJ0ZXN0IjogIm5vZGUgLS10ZXN0IHRlc3QvKi50ZXN0LmpzIgogICAgfSwKICAgICJkZXBlbmRlbmNpZXMiOiB7CiAgICAgICAgImF4aW9zIjogIl4xLjEzLjQiLAogICAgICAgICJwbGF5d3JpZ2h0IjogIl4xLjQwLjAiLAogICAgICAgICJwbGF5d3JpZ2h0LWV4dHJhIjogIl40LjMuNiIsCiAgICAgICAgInB1cHBldGVlci1leHRyYS1wbHVnaW4tc3RlYWx0aCI6ICJeMi4xMS4yIgogICAgfQp9Cg==
