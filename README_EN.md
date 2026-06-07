@@ -1,1 +1,124 @@
-IyBLYXRhYnVtcCBTZXJ2ZXIgQXV0by1SZW5ld2FsIFRvb2wKCltFbmdsaXNoIFZlcnNpb25dKFJFQURNRV9FTi5tZCkgfCBb5Lit5paH6K+05piOXShSRUFETUUubWQpCgpUaGlzIHByb2plY3QgaXMgYW4gYXV0b21hdGlvbiBzY3JpcHQgZm9yIHJlbmV3aW5nIEthdGFidW1wIHNlcnZlcnMuIEl0IHV0aWxpemVzIFBsYXl3cmlnaHQgYW5kIENEUCAoQ2hyb21lIERldlRvb2xzIFByb3RvY29sKSB0byBzaW11bGF0ZSB1c2VyIGludGVyYWN0aW9ucywgZWZmZWN0aXZlbHkgc3BlY2lmaWNhbGx5IHRhcmdldGluZyB0aGUgQ2xvdWRmbGFyZSBUdXJuc3RpbGUgQ0FQVENIQSB0byBlbnN1cmUgY29udGludW91cyBzZXJ2ZXIgc2VydmljZS4KCkl0IHN1cHBvcnRzIGJvdGggKipXaW5kb3dzIExvY2FsIEV4ZWN1dGlvbioqIGFuZCAqKkdpdEh1YiBBY3Rpb25zIENsb3VkIEV4ZWN1dGlvbioqLgoKIyMg4pyoIEZlYXR1cmVzCgotICoqU21hcnQgQnlwYXNzKio6IFVzZXMgQ0RQIHRvIHNpbXVsYXRlIHJlYWxpc3RpYyBtb3VzZSB0cmFqZWN0b3JpZXMgYW5kIGNsaWNrcywgY29tYmluZWQgd2l0aCBzY3JlZW4gY29vcmRpbmF0ZSBzcG9vZmluZywgdG8gYWNoaWV2ZSBhIGhpZ2ggc3VjY2VzcyByYXRlIGluIGJ5cGFzc2luZyBDbG91ZGZsYXJlIFR1cm5zdGlsZS4KLSAqKkF1dG8tUmV0cnkqKjogQnVpbHQtaW4gc3RyaWN0IHZlcmlmaWNhdGlvbiByZXRyeSBtZWNoYW5pc20uIEl0IGF1dG9tYXRpY2FsbHkgcmVzdGFydHMgdGhlIHZlcmlmaWNhdGlvbiBmbG93IGlmIHRoZSBDQVBUQ0hBIGNoZWNrIGZhaWxzLgotICoqTXVsdGktVXNlcioqOiBTdXBwb3J0cyBiYXRjaCByZW5ld2FsIGZvciBtdWx0aXBsZSBhY2NvdW50cy4KLSAqKkNsb3VkL0xvY2FsKio6IENhbiBydW4gb24geW91ciBsb2NhbCBtYWNoaW5lIG9yIGF1dG9tYXRpY2FsbHkgb24gcGFydCBvZiBhIGRhaWx5IHNjaGVkdWxlIHVzaW5nIEdpdEh1YiBBY3Rpb25zLgoKLS0tCgojIyDwn5qAIEdpdEh1YiBBY3Rpb25zIENsb3VkIFJ1biAoUmVjb21tZW5kZWQpCgpUaGlzIGlzIHRoZSBlYXNpZXN0IHdheSB0byBzZXQgaXQgdXAgb25jZSBhbmQgaGF2ZSBpdCBydW4gYXV0b21hdGljYWxseSBldmVyeSBkYXkuCgoxLiAgKipGb3JrIHRoaXMgcmVwb3NpdG9yeSoqIHRvIHlvdXIgR2l0SHViIGFjY291bnQuCjIuICBHbyB0byB5b3VyIHJlcG9zaXRvcnkgc2V0dGluZ3M6ICoqU2V0dGluZ3MqKiAtPiAqKlNlY3JldHMgYW5kIHZhcmlhYmxlcyoqIC0+ICoqQWN0aW9ucyoqLgozLiAgQ2xpY2sgKipOZXcgcmVwb3NpdG9yeSBzZWNyZXQqKiBhbmQgYWRkIGEgc2VjcmV0IG5hbWVkIGBVU0VSU19KU09OYC4KNC4gIFRoZSAqKlZhbHVlKiogbXVzdCBiZSBhIEpTT04gYXJyYXkgKGNvbmRlbnNlZCBpbnRvIGEgc2luZ2xlIGxpbmUgaXMgYmVzdCk6CiAgICBgYGBqc29uCiAgICBbeyJ1c2VybmFtZSI6ICJ5b3VyX2VtYWlsQGV4YW1wbGUuY29tIiwgInBhc3N3b3JkIjogInlvdXJfcGFzc3dvcmQifSwgeyJ1c2VybmFtZSI6ICJhbm90aGVyQGV4YW1wbGUuY29tIiwgInBhc3N3b3JkIjogInB3ZCJ9XQogICAgYGBgCjUuICAqKihPcHRpb25hbCkgQ29uZmlndXJlIFByb3h5Kio6CiAgICBJZiB5b3UgbmVlZCB0byBydW4gYmVoaW5kIGEgcHJveHkgKGUuZy4gdG8gYXZvaWQgSVAgYmxvY2tzKSwgYWRkIGEgU2VjcmV0IG5hbWVkIGBIVFRQX1BST1hZYC4KICAgIC0gICAqKkZvcm1hdCoqOgogICAgICAgIC0gICBObyBBdXRoOiBgaHR0cDovL2lwOnBvcnRgCiAgICAgICAgLSAgIFdpdGggQXV0aDogYGh0dHA6Ly91c2VybmFtZTpwYXNzd29yZEBpcDpwb3J0YAogICAgLSAgICoqTm90ZSoqOiBUaGUgc2NyaXB0IHZhbGlkYXRlcyB0aGUgcHJveHkgYmVmb3JlIHVzZS4gRGVmYXVsdCBpcyBkaXNhYmxlZC4KNi4gICoqKE9wdGlvbmFsKSBUZWxlZ3JhbSBOb3RpZmljYXRpb25zKio6CiAgICBJZiB5b3Ugd2FudCB0byByZWNlaXZlIFRlbGVncmFtIG5vdGlmaWNhdGlvbnMgKHdpdGggc2NyZWVuc2hvdHMpIHVwb24gcmVuZXdhbCBzdWNjZXNzLCBmYWlsdXJlLCBvciBza2lwLCBhZGQgdGhlIGZvbGxvd2luZyBTZWNyZXRzOgogICAgLSAgIGBUR19CT1RfVE9LRU5gOiBZb3VyIFRlbGVncmFtIEJvdCBUb2tlbiAoZnJvbSBAQm90RmF0aGVyKS4KICAgIC0gICBgVEdfQ0hBVF9JRGA6IFlvdXIgQ2hhdCBJRCAoVXNlciBJRCBvciBHcm91cCBJRCkuCiAgICA+IElmIG5vdCBjb25maWd1cmVkLCBub3RpZmljYXRpb25zIHdpbGwgYmUgc2tpcHBlZC4KIyMjIDQuIFJlc3VsdHMgJiBTY3JlZW5zaG90cwotICoqTG9ncyoqOiBDaGVjayByZWFsLXRpbWUgbG9ncyBpbiB0aGUgYFJ1biBSZW5ldyBTY3JpcHRgIHN0ZXAuCi0gKipTY3JlZW5zaG90cyoqOiBTY3JlZW5zaG90cyBhcmUgYXV0b21hdGljYWxseSBjYXB0dXJlZCBmb3IgZWFjaCB1c2VyIChzdWNjZXNzIG9yIGZhaWx1cmUpIGFuZCB1cGxvYWRlZCBhcyBhcnRpZmFjdHMuCiAgLSBEb3dubG9hZCB0aGUgYHNjcmVlbnNob3RzYCB6aXAgZmlsZSBmcm9tIHRoZSAqKkFydGlmYWN0cyoqIHNlY3Rpb24gb2YgdGhlIHdvcmtmbG93IHJ1biBzdW1tYXJ5LgogIC0gRmlsZXMgYXJlIG5hbWVkIGB1c2VybmFtZS5wbmdgLgo1LiAgU2F2ZSBpdC4gVGhlbiwgZ28gdG8gdGhlICoqQWN0aW9ucyoqIHRhYiBhbmQgZW5hYmxlIHRoZSB3b3JrZmxvdy4gSXQgaXMgc2NoZWR1bGVkIHRvIHJ1biBhdXRvbWF0aWNhbGx5IGF0ICoqMDg6MDAgQmVpamluZyBUaW1lICgwMDowMCBVVEMpKiouCjYuICBZb3UgY2FuIGFsc28gbWFudWFsbHkgY2xpY2sgIlJ1biB3b3JrZmxvdyIgdG8gdGVzdCBpdCBpbW1lZGlhdGVseS4KCi0tLQoKIyMg8J+SuyBXaW5kb3dzIExvY2FsIEV4ZWN1dGlvbiBHdWlkZQoKRm9sbG93IHRoZXNlIHN0ZXBzIGlmIHlvdSB3YW50IHRvIHJ1biB0aGUgc2NyaXB0IGxvY2FsbHkgb24geW91ciBjb21wdXRlciBmb3IgZGVidWdnaW5nIG9yIG1vbml0b3JpbmcuCgojIyMgMS4gUHJlcmVxdWlzaXRlcwpFbnN1cmUgeW91IGhhdmUgW05vZGUuanNdKGh0dHBzOi8vbm9kZWpzLm9yZy8pIGluc3RhbGxlZCAodmVyc2lvbiB2MTgrIHJlY29tbWVuZGVkKS4KCiMjIyAyLiBJbnN0YWxsIERlcGVuZGVuY2llcwpPcGVuIGEgdGVybWluYWwgKFBvd2VyU2hlbGwgb3IgQ01EKSBpbiB0aGUgcHJvamVjdCByb290IGRpcmVjdG9yeSBhbmQgcnVuOgpgYGBiYXNoCm5wbSBpbnN0YWxsCmBgYAoKIyMjIDMuIENvbmZpZ3VyZSBDcmVkZW50aWFscwpUaGUgcHJvamVjdCBjb250YWlucyBhIGBsb2dpbi5qc29uLnRlbXBsYXRlYCBmaWxlLgoxLiAqKlJlbmFtZSoqIGl0IHRvIGBsb2dpbi5qc29uYC4KMi4gT3BlbiBpdCB3aXRoIGEgdGV4dCBlZGl0b3IgYW5kIGZpbGwgaW4geW91ciBhY2NvdW50IGNyZWRlbnRpYWxzOgogICBgYGBqc29uCiAgIFsKICAgICAgIHsKICAgICAgICAgICAidXNlcm5hbWUiOiAibXllbWFpbEBnbWFpbC5jb20iLAogICAgICAgICAgICJwYXNzd29yZCI6ICJteXBhc3N3b3JkMTIzIgogICAgICAgfQogICBdCiAgIGBgYAogICA+ICoqTm90ZSoqOiBgbG9naW4uanNvbmAgaXMgaW5jbHVkZWQgaW4gYC5naXRpZ25vcmVgIGFuZCB3aWxsIE5PVCBiZSB1cGxvYWRlZCB0byBHaXRIdWIuCgojIyMgNC4gQ29uZmlndXJlIENocm9tZSBQYXRoCk9wZW4gdGhlIGByZW5ldy5qc2AgZmlsZSBhbmQgbG9vayBmb3IgbGluZXMgMTEtMTI6CgpgYGBqYXZhc2NyaXB0CmNvbnN0IENIUk9NRV9QQVRIID0gIkM6XFxQcm9ncmFtIEZpbGVzXFxHb29nbGVcXENocm9tZVxcQXBwbGljYXRpb25cXGNocm9tZS5leGUiOwpjb25zdCBVU0VSX0RBVEFfRElSID0gcGF0aC5qb2luKF9fZGlybmFtZSwgJ0Nocm9tZURhdGFfS2F0YWJ1bXAnKTsKY29uc3QgSEVBRExFU1MgPSB0cnVlOwpgYGAKCiogICAqKkNIUk9NRV9QQVRIKio6IFRoaXMgaXMgdGhlIGluc3RhbGxhdGlvbiBwYXRoIG9mIHlvdXIgbG9jYWwgQ2hyb21lIGJyb3dzZXIuIE1vZGlmeSB0aGlzIGlmIHlvdXIgaW5zdGFsbGF0aW9uIHBhdGggaXMgZGlmZmVyZW50IQoqICAgKipVU0VSX0RBVEFfRElSKio6CiAgICAqICAgVGhpcyBmb2xkZXIgc3RvcmVzIGJyb3dzZXIgZGF0YSBnZW5lcmF0ZWQgZHVyaW5nIHNjcmlwdCBleGVjdXRpb24gKGNhY2hlLCBjb29raWVzLCBzZXNzaW9ucywgZXRjLikuCiAgICAqICAgKipQdXJwb3NlKio6IEl0IGhlbHBzIG1haW50YWluIHlvdXIgbG9naW4gc2Vzc2lvbiBzbyB5b3UgZG9uJ3QgbmVlZCB0byByZS1lbnRlciBjcmVkZW50aWFscyBldmVyeSB0aW1lLgogICAgKiAgICoqQ2FuIGl0IGJlIGRlbGV0ZWQ/Kio6ICoqWWVzKiouIElmIHlvdSB3YW50IHRvIHJlc2V0IGFsbCBzdGF0ZXMgKGNsZWFyIGNhY2hlIGNvbXBsZXRlbHkpLCBzaW1wbHkgZGVsZXRlIHRoaXMgZm9sZGVyLiBUaGUgc2NyaXB0IHdpbGwgcmVjcmVhdGUgaXQgdGhlIG5leHQgdGltZSBpdCBydW5zLgoqICAgKipIRUFETEVTUyoqOgogICAgKiAgIGBmYWxzZWA6IFRoZSBzY3JpcHQgbGF1bmNoZXMgYSB2aXNpYmxlIENocm9tZSB3aW5kb3cgc28geW91IGNhbiBzZWUgd2hhdCBpdCdzIGRvaW5nLgogICAgKiAgIGB0cnVlYDogKERlZmF1bHQpIFJ1bnMgc2lsZW50bHkgaW4gdGhlIGJhY2tncm91bmQgKGhlYWRsZXNzIG1vZGUpLCB1c2VmdWwgaWYgeW91IHdhbnQgaXQgdG8gcnVuIHdpdGhvdXQgZGlzdHVyYmluZyB5b3UuCgojIyMgNS4gUnVuIFNjcmlwdAoKSWYgeW91IG5lZWQgdG8gdXNlIGEgcHJveHksIHNldCB0aGUgYEhUVFBfUFJPWFlgIGVudmlyb25tZW50IHZhcmlhYmxlOgoKKipQb3dlcnNoZWxsOioqCmBgYHBvd2Vyc2hlbGwKJGVudjpIVFRQX1BST1hZPSJodHRwOi8vdXNlcjpwYXNzQDEyNy4wLjAuMTo3ODkwIgpub2RlIHJlbmV3LmpzCmBgYAoKKipDTUQ6KioKYGBgY21kCnNldCBIVFRQX1BST1hZPWh0dHA6Ly91c2VyOnBhc3NAMTI3LjAuMC4xOjc4OTAKbm9kZSByZW5ldy5qcwpgYGAKCk9yIGp1c3QgcnVuIHdpdGhvdXQgcHJveHk6CmBgYGJhc2gKbm9kZSByZW5ldy5qcwpgYGAKVGhlIHNjcmlwdCB3aWxsIGF1dG8tbGF1bmNoIENocm9tZSAoaWYgbmVlZGVkKSwgcHJvY2VzcyBlYWNoIGFjY291bnQsIGFuZCBzYXZlIGEgc2NyZWVuc2hvdCAoYHVzZXJuYW1lLnBuZ2ApIGluIHRoZSBgcGhvdG8vYCBkaXJlY3RvcnkgdXBvbiBjb21wbGV0aW9uLgoKLS0tCgojIyDwn5ug77iPIFByb2plY3QgU3RydWN0dXJlCgoqICAgYHJlbmV3LmpzYDogTWFpbiBzY3JpcHQgZm9yIFdpbmRvd3MgbG9jYWwgZXhlY3V0aW9uLgoqICAgYGFjdGlvbl9yZW5ldy5qc2A6IERlZGljYXRlZCBzY3JpcHQgZm9yIEdpdEh1YiBBY3Rpb25zIGVudmlyb25tZW50IChMaW51eC9IZWFkbGVzcyBhZGFwdGVkKS4KKiAgIGAuZ2l0aHViL3dvcmtmbG93cy9yZW5ldy55bWxgOiBDb25maWd1cmF0aW9uIGZpbGUgZm9yIEdpdEh1YiBBY3Rpb25zIHNjaGVkdWxlZCB0YXNrcy4KKiAgIGBsb2dpbi5qc29uYDogKE1hbnVhbGx5IGNyZWF0ZWQpIFN0b3JlcyBhY2NvdW50IGluZm8gZm9yIGxvY2FsIHJ1bnMuCg==
+# Katabump Server Auto-Renewal Tool
+
+[English Version](README_EN.md) | [中文说明](README.md)
+
+This project is an automation script for renewing Katabump servers. It utilizes Playwright and CDP (Chrome DevTools Protocol) to simulate user interactions, effectively specifically targeting the Cloudflare Turnstile CAPTCHA to ensure continuous server service.
+
+It supports both **Windows Local Execution** and **GitHub Actions Cloud Execution**.
+
+## ✨ Features
+
+- **Smart Bypass**: Uses CDP to simulate realistic mouse trajectories and clicks, combined with screen coordinate spoofing, to achieve a high success rate in bypassing Cloudflare Turnstile.
+- **Auto-Retry**: Built-in strict verification retry mechanism. It automatically restarts the verification flow if the CAPTCHA check fails.
+- **Multi-User**: Supports batch renewal for multiple accounts.
+- **Cloud/Local**: Can run on your local machine or automatically on part of a daily schedule using GitHub Actions.
+
+---
+
+## 🚀 GitHub Actions Cloud Run (Recommended)
+
+This is the easiest way to set it up once and have it run automatically every day.
+
+1.  **Fork this repository** to your GitHub account.
+2.  Go to your repository settings: **Settings** -> **Secrets and variables** -> **Actions**.
+3.  Click **New repository secret** and add a secret named `USERS_JSON`.
+4.  The **Value** must be a JSON array (condensed into a single line is best):
+    ```json
+    [{"username": "your_email@example.com", "password": "your_password"}, {"username": "another@example.com", "password": "pwd"}]
+    ```
+5.  **(Optional) Configure Proxy**:
+    If you need to run behind a proxy (e.g. to avoid IP blocks), add a Secret named `HTTP_PROXY`.
+    -   **Format**:
+        -   No Auth: `http://ip:port`
+        -   With Auth: `http://username:password@ip:port`
+    -   **Note**: The script validates the proxy before use. Default is disabled.
+6.  **(Optional) Telegram Notifications**:
+    If you want to receive Telegram notifications (with screenshots) upon renewal success, failure, or skip, add the following Secrets:
+    -   `TG_BOT_TOKEN`: Your Telegram Bot Token (from @BotFather).
+    -   `TG_CHAT_ID`: Your Chat ID (User ID or Group ID).
+    > If not configured, notifications will be skipped.
+### 4. Results & Screenshots
+- **Logs**: Check real-time logs in the `Run Renew Script` step.
+- **Screenshots**: Screenshots are automatically captured for each user (success or failure) and uploaded as artifacts.
+  - Download the `screenshots` zip file from the **Artifacts** section of the workflow run summary.
+  - Files are named `username.png`.
+5.  Save it. Then, go to the **Actions** tab and enable the workflow. It is scheduled to run automatically at **08:00 Beijing Time (00:00 UTC)**.
+6.  You can also manually click "Run workflow" to test it immediately.
+
+---
+
+## 💻 Windows Local Execution Guide
+
+Follow these steps if you want to run the script locally on your computer for debugging or monitoring.
+
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed (version v18+ recommended).
+
+### 2. Install Dependencies
+Open a terminal (PowerShell or CMD) in the project root directory and run:
+```bash
+npm install
+```
+
+### 3. Configure Credentials
+The project contains a `login.json.template` file.
+1. **Rename** it to `login.json`.
+2. Open it with a text editor and fill in your account credentials:
+   ```json
+   [
+       {
+           "username": "myemail@gmail.com",
+           "password": "mypassword123"
+       }
+   ]
+   ```
+   > **Note**: `login.json` is included in `.gitignore` and will NOT be uploaded to GitHub.
+
+### 4. Configure Chrome Path
+Open the `renew.js` file and look for lines 11-12:
+
+```javascript
+const CHROME_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const USER_DATA_DIR = path.join(__dirname, 'ChromeData_Katabump');
+const HEADLESS = true;
+```
+
+*   **CHROME_PATH**: This is the installation path of your local Chrome browser. Modify this if your installation path is different!
+*   **USER_DATA_DIR**:
+    *   This folder stores browser data generated during script execution (cache, cookies, sessions, etc.).
+    *   **Purpose**: It helps maintain your login session so you don't need to re-enter credentials every time.
+    *   **Can it be deleted?**: **Yes**. If you want to reset all states (clear cache completely), simply delete this folder. The script will recreate it the next time it runs.
+*   **HEADLESS**:
+    *   `false`: The script launches a visible Chrome window so you can see what it's doing.
+    *   `true`: (Default) Runs silently in the background (headless mode), useful if you want it to run without disturbing you.
+
+### 5. Run Script
+
+If you need to use a proxy, set the `HTTP_PROXY` environment variable:
+
+**Powershell:**
+```powershell
+$env:HTTP_PROXY="http://user:pass@127.0.0.1:7890"
+node renew.js
+```
+
+**CMD:**
+```cmd
+set HTTP_PROXY=http://user:pass@127.0.0.1:7890
+node renew.js
+```
+
+Or just run without proxy:
+```bash
+node renew.js
+```
+The script will auto-launch Chrome (if needed), process each account, and save a screenshot (`username.png`) in the `photo/` directory upon completion.
+
+---
+
+## 🛠️ Project Structure
+
+*   `renew.js`: Main script for Windows local execution.
+*   `action_renew.js`: Dedicated script for GitHub Actions environment (Linux/Headless adapted).
+*   `.github/workflows/renew.yml`: Configuration file for GitHub Actions scheduled tasks.
+*   `login.json`: (Manually created) Stores account info for local runs.

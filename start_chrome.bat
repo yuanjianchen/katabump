@@ -1,1 +1,2 @@
-QGVjaG8gb2ZmCiJDOlxQcm9ncmFtIEZpbGVzXEdvb2dsZVxDaHJvbWVcQXBwbGljYXRpb25cY2hyb21lLmV4ZSIgLS1yZW1vdGUtZGVidWdnaW5nLXBvcnQ9OTIyMiAtLXVzZXItZGF0YS1kaXI9IkM6XENocm9tZURhdGFfS2F0YWJ1bXAiCg==
+@echo off
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\ChromeData_Katabump"

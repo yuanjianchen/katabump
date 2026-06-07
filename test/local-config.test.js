@@ -1,1 +1,41 @@
-Y29uc3QgdGVzdCA9IHJlcXVpcmUoJ25vZGU6dGVzdCcpOwpjb25zdCBhc3NlcnQgPSByZXF1aXJlKCdub2RlOmFzc2VydC9zdHJpY3QnKTsKY29uc3QgewogIHJlc29sdmVDaHJvbWVQYXRoLAogIHJlc29sdmVIZWFkbGVzcywKICByZXNvbHZlRGVidWdQb3J0LAp9ID0gcmVxdWlyZSgnLi4vbG9jYWxfY29uZmlnJyk7Cgp0ZXN0KCdyZXNvbHZlQ2hyb21lUGF0aCB1c2VzIGV4cGxpY2l0IENIUk9NRV9QQVRIIGJlZm9yZSBwbGF0Zm9ybSBkZWZhdWx0cycsICgpID0+IHsKICBhc3NlcnQuZXF1YWwoCiAgICByZXNvbHZlQ2hyb21lUGF0aCh7IGVudjogeyBDSFJPTUVfUEFUSDogJy9jdXN0b20vY2hyb21lJyB9LCBwbGF0Zm9ybTogJ2RhcndpbicgfSksCiAgICAnL2N1c3RvbS9jaHJvbWUnCiAgKTsKfSk7Cgp0ZXN0KCdyZXNvbHZlQ2hyb21lUGF0aCByZXR1cm5zIG1hY09TIENocm9tZSBwYXRoIG9uIGRhcndpbicsICgpID0+IHsKICBhc3NlcnQuZXF1YWwoCiAgICByZXNvbHZlQ2hyb21lUGF0aCh7IGVudjoge30sIHBsYXRmb3JtOiAnZGFyd2luJyB9KSwKICAgICcvQXBwbGljYXRpb25zL0dvb2dsZSBDaHJvbWUuYXBwL0NvbnRlbnRzL01hY09TL0dvb2dsZSBDaHJvbWUnCiAgKTsKfSk7Cgp0ZXN0KCdyZXNvbHZlSGVhZGxlc3Mga2VlcHMgdmlzaWJsZSBicm93c2VyIGJ5IGRlZmF1bHQgYW5kIGFjY2VwdHMgY29tbW9uIHRydXRoeSB2YWx1ZXMnLCAoKSA9PiB7CiAgYXNzZXJ0LmVxdWFsKHJlc29sdmVIZWFkbGVzcyh7fSksIGZhbHNlKTsKICBhc3NlcnQuZXF1YWwocmVzb2x2ZUhlYWRsZXNzKHsgSEVBRExFU1M6ICcxJyB9KSwgdHJ1ZSk7CiAgYXNzZXJ0LmVxdWFsKHJlc29sdmVIZWFkbGVzcyh7IEhFQURMRVNTOiAndHJ1ZScgfSksIHRydWUpOwogIGFzc2VydC5lcXVhbChyZXNvbHZlSGVhZGxlc3MoeyBIRUFETEVTUzogJ3llcycgfSksIHRydWUpOwp9KTsKCnRlc3QoJ3Jlc29sdmVEZWJ1Z1BvcnQgZGVmYXVsdHMgdG8gOTIyMiBhbmQgcmVqZWN0cyBpbnZhbGlkIHZhbHVlcycsICgpID0+IHsKICBhc3NlcnQuZXF1YWwocmVzb2x2ZURlYnVnUG9ydCh7fSksIDkyMjIpOwogIGFzc2VydC5lcXVhbChyZXNvbHZlRGVidWdQb3J0KHsgREVCVUdfUE9SVDogJzkzMzMnIH0pLCA5MzMzKTsKICBhc3NlcnQudGhyb3dzKCgpID0+IHJlc29sdmVEZWJ1Z1BvcnQoeyBERUJVR19QT1JUOiAnbm90LWEtcG9ydCcgfSksIC9JbnZhbGlkIERFQlVHX1BPUlQvKTsKfSk7Cgpjb25zdCB7IHNhZmVVc2VybmFtZSB9ID0gcmVxdWlyZSgnLi4vbG9jYWxfY29uZmlnJyk7Cgp0ZXN0KCdzYWZlVXNlcm5hbWUgc3RyaXBzIHVuc2FmZSBzY3JlZW5zaG90IGZpbGVuYW1lIGNoYXJhY3RlcnMnLCAoKSA9PiB7CiAgYXNzZXJ0LmVxdWFsKHNhZmVVc2VybmFtZSgndXNlci5uYW1lK3RhZ0BleGFtcGxlLmNvbScpLCAndXNlcl9uYW1lX3RhZ19leGFtcGxlX2NvbScpOwogIGFzc2VydC5lcXVhbChzYWZlVXNlcm5hbWUoJy4uLy4uL2V2aWwnKSwgJ19fX19fX2V2aWwnKTsKfSk7Cg==
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const {
+  resolveChromePath,
+  resolveHeadless,
+  resolveDebugPort,
+} = require('../local_config');
+
+test('resolveChromePath uses explicit CHROME_PATH before platform defaults', () => {
+  assert.equal(
+    resolveChromePath({ env: { CHROME_PATH: '/custom/chrome' }, platform: 'darwin' }),
+    '/custom/chrome'
+  );
+});
+
+test('resolveChromePath returns macOS Chrome path on darwin', () => {
+  assert.equal(
+    resolveChromePath({ env: {}, platform: 'darwin' }),
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+  );
+});
+
+test('resolveHeadless keeps visible browser by default and accepts common truthy values', () => {
+  assert.equal(resolveHeadless({}), false);
+  assert.equal(resolveHeadless({ HEADLESS: '1' }), true);
+  assert.equal(resolveHeadless({ HEADLESS: 'true' }), true);
+  assert.equal(resolveHeadless({ HEADLESS: 'yes' }), true);
+});
+
+test('resolveDebugPort defaults to 9222 and rejects invalid values', () => {
+  assert.equal(resolveDebugPort({}), 9222);
+  assert.equal(resolveDebugPort({ DEBUG_PORT: '9333' }), 9333);
+  assert.throws(() => resolveDebugPort({ DEBUG_PORT: 'not-a-port' }), /Invalid DEBUG_PORT/);
+});
+
+const { safeUsername } = require('../local_config');
+
+test('safeUsername strips unsafe screenshot filename characters', () => {
+  assert.equal(safeUsername('user.name+tag@example.com'), 'user_name_tag_example_com');
+  assert.equal(safeUsername('../../evil'), '______evil');
+});
